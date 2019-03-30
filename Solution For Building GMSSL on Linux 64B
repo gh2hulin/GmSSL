@@ -1,0 +1,48 @@
+https://github.com/openssl/openssl/blob/master/INSTALL
+
+Quick Start
+ -----------
+
+ If you want to just get on with it, do:
+
+  on Unix/Linux (again, this includes Mac OS/X):
+
+    $ ./config
+    $ make
+    $ make test
+    $ make install
+
+If any of these steps fails, see section Installation in Detail below.
+
+ This will build and install OpenSSL in the default location, which is:
+
+  Unix/Linux:    normal installation directories under /usr/local
+
+If you want to install it anywhere else, run config like this:
+
+  On Unix:
+
+    $ ./config --prefix=/opt/openssl --openssldir=/usr/local/ssl
+
+(Note: if you do add options to the configuration command, please make sure
+ you've read more than just this Quick Start, such as relevant NOTES.* files,
+ the options outline below, as configuration options may change the outcome
+ in otherwise unexpected ways)
+
+Configuration Options
+ ---------------------
+
+ There are several options to ./config (or ./Configure) to customize
+ the build :
+
+  --openssldir=DIR
+                   Directory for OpenSSL configuration files, and also the
+                   default certificate and key store.  Defaults are:
+
+                   Unix:           /usr/local/ssl
+
+  --prefix=DIR
+                   The top of the installation directory tree.  Defaults are:
+
+                   Unix:           /usr/local
+
